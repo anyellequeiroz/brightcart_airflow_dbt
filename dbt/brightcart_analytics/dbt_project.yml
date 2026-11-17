@@ -1,0 +1,21 @@
+name: brightcart_analytics
+version: "1.0.0"
+profile: brightcart
+
+model-paths: ["models"]
+test-paths: ["tests"]
+target-path: "target"
+clean-targets: ["target", "dbt_packages"]
+
+models:
+  brightcart_analytics:
+    +tags: ["daily_orders"]
+    staging:
+      +materialized: view
+      +schema: staging
+    intermediate:
+      +materialized: view
+      +schema: intermediate
+    marts:
+      +materialized: table
+      +schema: marts

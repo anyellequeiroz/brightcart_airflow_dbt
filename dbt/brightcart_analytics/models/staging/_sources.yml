@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: raw
+    description: "Validated BrightCart rows, loaded by Airflow (load_raw_to_warehouse) one day at a time."
+    tables:
+      - name: orders
+        description: "Valid orders from data/cleaned/<run_date>/orders_valid.csv"
+      - name: customers
+        description: "Valid customer snapshot from data/cleaned/<run_date>/customers_valid.csv"

@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: fct_daily_sales
+    description: "Completed orders and revenue per day and city."
+    columns:
+      - name: order_date
+        data_tests:
+          - not_null
+      - name: city
+        data_tests:
+          - not_null
+      - name: completed_revenue_gbp
+        data_tests:
+          - not_null

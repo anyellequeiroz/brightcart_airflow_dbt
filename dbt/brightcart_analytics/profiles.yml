@@ -1,0 +1,9 @@
+# The DuckDB warehouse is one file inside the project:
+# data/warehouse/brightcart.duckdb (relative to this dbt folder).
+brightcart:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: ../../data/warehouse/brightcart.duckdb
+      threads: 1
